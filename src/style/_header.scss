@@ -1,0 +1,22 @@
+.headerContainer {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: calc(100% - 70px);
+  padding: 16px 35px;
+  background: rgb(230, 47, 23);
+  box-shadow: 0 0 3px #e7e7e7;
+  z-index: 9;
+  .c-secondary-btn {
+    color:#fff;
+    border-color:#fff;
+  }
+}
+
+.headerTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+}
+

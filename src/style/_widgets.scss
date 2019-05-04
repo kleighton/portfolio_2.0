@@ -1,0 +1,80 @@
+.widget {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #ddd;
+  margin: 10px auto;
+  vertical-align: top;
+  font-size: 17px;
+  color: #555;
+  cursor: pointer;
+  width: calc(100% - 20px);
+  padding:10px 15px;
+  &:hover {
+    box-shadow: 0 0 4px #03a4b6;
+  }
+  .widgetHeader {
+    color: #777;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+
+}
+
+
+/* WIDGET WIDTH CLASSES */
+.width-25 {
+  width: calc(25% - 22px);
+}
+
+.width-30 {
+  width: calc(33.3333% - 22px);
+}
+
+.width-50 {
+  width: calc(50% - 22px);
+}
+
+.width-70 {
+  width: calc(66.6666% - 22px);
+}
+
+.width-100 {
+  width: calc(100% - 22px);
+}
+
+@media screen and (max-width:1200px) {
+  .width-25 {
+    width: calc(33% - 22px);
+  }
+}
+
+@media screen and (max-width:900px) {
+  .width-25 {
+    width: calc(50% - 22px);
+  }
+
+  .width-30 {
+    width: calc(50% - 22px);
+  }
+}
+
+@media screen and (max-width:700px) {
+  .width-25 {
+    width: calc(100% - 22px);
+  }
+
+  .width-30 {
+    width: calc(100% - 22px);
+  }
+
+  .width-50 {
+    width: calc(100% - 22px);
+  }
+
+  .width-70 {
+    width: calc(100% - 22px);
+  }
+}

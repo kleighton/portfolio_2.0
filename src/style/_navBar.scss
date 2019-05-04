@@ -1,0 +1,119 @@
+.navContainer {
+  height: 100%;
+  background: $blue;
+  width:180px;
+  display:inline-block;
+  position:fixed;
+  z-index:10;
+}
+.navItem {
+  color:#fff;
+  text-align:left;
+  padding:16px 18px 16px 22px;
+  cursor: pointer;
+  transition:.1s ease;
+  position:relative;
+  height:25px;
+}
+.navItem:hover,
+.navItem.active {
+  background:$blue-2;
+}
+.navItem:hover .navItemTool {
+  display:block;
+}
+.navItemTool {
+  display:none;
+  position: absolute;
+  background:rgba(0,0,0,.8);
+  padding:10px 20px;
+  font-size:14px;
+  width:100px;
+  text-align: left;
+  border-radius:5px;
+  left:65px;
+  top:calc(50% - 18px);
+}
+.navItemTool:after {
+  content:'';
+  position: absolute;
+  left: -7px;
+  top:12px;
+  border-right:7px solid rgba(0,0,0,.8);
+  border-top:7px solid transparent;
+  border-bottom:7px solid transparent;
+}
+
+.navItem > i {
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+// dark-theme
+  .navContainer.dark-theme {
+    height: 100%;
+    background: #213136;
+    width:180px;
+    display:inline-block;
+    position:fixed;
+    z-index:10;
+ 
+  .navItem {
+    color:#fff;
+  text-align:left;
+  padding:16px 18px 16px 22px;
+  cursor: pointer;
+  transition:.1s ease;
+  position:relative;
+  height:25px;
+    i {
+      opacity:.6;
+    }
+  }
+  .navItem:hover,
+  .navItem.active {
+    background:$dark5;
+    color:#fff;
+    i {
+      opacity:1;
+      color:#fff;
+    }
+  }
+  .navItem:hover .navItemTool {
+    display:block;
+  }
+  .navItemTool {
+    display:none;
+    position: absolute;
+    background:rgba(0,0,0,.8);
+    padding:10px 20px;
+    font-size:14px;
+    width:100px;
+    text-align: left;
+    border-radius:5px;
+    left:65px;
+    top:calc(50% - 18px);
+  }
+  .navItemTool:after {
+    content:'';
+    position: absolute;
+    left: -7px;
+    top:12px;
+    border-right:7px solid rgba(0,0,0,.8);
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+  }
+  .toggleThemeBtn {
+    position:absolute;
+    bottom:0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:7px 12px;
+    margin:0 auto;
+    color:#fff;
+    .toggleThemeIcon {
+      display:inline-block;
+      color:#efefef;
+    }
+  }
+}

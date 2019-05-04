@@ -1,0 +1,36 @@
+.c {
+
+  &-primary-btn {
+    padding: 5px 15px;
+    margin:0 15px;
+    background:$blue2;
+    border:1px solid $blue2;
+    border-radius:4px;
+    color:white;
+    font-size:14px;
+    display:inline-block;
+    cursor:pointer;
+    &:hover {
+      background:$blue-2;
+      border-color:$blue-2;
+    }
+  }
+
+  &-secondary-btn {
+    padding: 5px 15px;
+    margin:0 15px;
+    background:transparent;
+    border:1px solid $grey4;
+    border-radius:4px;
+    color:white;
+    font-size:14px;
+    color:$grey-3;
+    display:inline-block;
+    cursor:pointer;
+    &:hover {
+      background: $blue;
+      border-color:$blue;
+      color:white;
+    }
+  }
+}
