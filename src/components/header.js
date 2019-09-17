@@ -1,35 +1,41 @@
-/* Header Component*/
-import PrimaryBtn from '../utilities/buttons';
+'use strict'
 
-var header = function () {
-  const appContainer = document.getElementById('appContainer');
-  var headerContainer = document.createElement('div');
-  const headerTitle = document.createElement('div');
-  const headerAccount = document.createElement('div');
-  const headerProfile = document.createElement('div');
-  var headerProfileDropdown = document.createElement('div');
+import Component from './component'
 
-  headerContainer.className = 'headerContainer';
-  headerTitle.className = 'headerTitle';
-  headerTitle.innerHTML = 'Client Leads';
-  headerAccount.className = 'headerAccount';
-  headerProfile.className = 'headerProfile';
-  headerProfileDropdown.className = 'headerProfileDropdown';
+var Header = new Component(null, 'header', 'header')
+setTimeout(() => {
+  Header.style.opacity = '1'
+}, 300)
 
-  headerContainer.appendChild(headerTitle);
+Header.logo = new Component(null, 'header-logo', null)
+Header.logo.innerHTML = 'leighton'
 
-  const addBtn = new PrimaryBtn('secondary','Add Client');
-  headerContainer.appendChild(addBtn.btn);
-  headerContainer.className = 'headerContainer';
+Header.nav = new Component('ul', 'header-nav', null)
+Header.items = [ 'Projects', 'Services', 'Contact' ]
 
-  /* Methods */
-  var render = function(){
-    appContainer.appendChild(headerContainer);
-  }
-  return {
-    render: render
-  }
+var sectionLinks = []
 
-}();
+let resetActiveLink = (array) => {
+  array.forEach(item => {
+    item.className = ''
+  })
+}
 
-export { header }
+Header.items.forEach(element => {
+  var item = new Component('li', null, null)
+  item.innerHTML = element
+  var sectionLink = new Component('a', null, null)
+  sectionLink.href = '#' + element
+  sectionLink.appendChild(item)
+  sectionLinks.push(item)
+  Header.nav.appendChild(sectionLink)
+  sectionLink.addEventListener('click', function () {
+    resetActiveLink(sectionLinks)
+    item.className = 'active'
+  })
+})
+
+Header.appendChild(Header.logo)
+Header.appendChild(Header.nav)
+
+export default Header

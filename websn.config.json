@@ -1,0 +1,51 @@
+{
+  "input": {
+    "base": "src",
+    "entry": "index.js",
+    "htmlFiles": [
+      "index.html"
+    ],
+    "styles": "styles/main.scss"
+  },
+  "output": {
+    "base": "dist",
+    "styles": "css/site.css",
+    "scripts": "js/site.js"
+  },
+  "style": {
+    "minifiedHtml": false,
+    "beautifiedHtml": true,
+    "criticalCss": false
+  },
+  "vendorCopy": [
+    {
+      "from": "some/package/directory",
+      "files": "**/*",
+      "to": "target/directory/in/output/base"
+    }
+  ],
+  "devServer": {
+    "host": "localhost",
+    "disableHostCheck": false,
+    "port": 8000,
+    "hot": true,
+    "open": true,
+    "overlay": true,
+    "reloadOnChange": [
+      "html",
+      "js",
+      "css",
+      "scss",
+      "jpe?g",
+      "png",
+      "gif",
+      "svg",
+      "ico",
+      "ttf",
+      "otf",
+      "eot",
+      "woff",
+      "woff2"
+    ]
+  }
+}
